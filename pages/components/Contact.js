@@ -1,14 +1,19 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from "react-icons/fa";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaLinkedinIn,
+  FaTwitter,
+} from "react-icons/fa";
 import { HiOutlineChevronDoubleUp } from "react-icons/hi";
-import NavLogo from "../../assets/img/navLogo.png";
+import Logo from "../../assets/img/logo1.png";
 
 const Contact = () => {
   return (
-    <div id="contact" className="w-full lg:h-screen container mb-[16rem]">
-      <div className="max-w-[1240px] m-auto px-2 py-16 w-full ">
+    
+      <div id ="contact" className=" w-full m-auto px-2 py-5 bg-neutral-100 text-center text-black dark:bg-black dark:text-white ">
         <p className="text-xl tracking-widest uppercase text-[#5651e5]">
           Contact
         </p>
@@ -17,24 +22,28 @@ const Contact = () => {
           {/* left */}
           <div className="col-span-3 lg:col-span-2 w-full h-full shadow-xl shadow-gray-400 rounded-xl p-4">
             <div className="lg:p-4 h-full ">
-              <div>
+           
                 <Image
-                  className="rounded-xl hover:scale-105 ease-in duration-300"
-                  src={NavLogo}
+                  className="rounded-xl hover:scale-105 ease-in duration-300 mx-auto py-3"
+                  src={Logo}
+                  width="100%"
+                  height="auto"
                   alt="/"
+                 
                 />
-              </div>
+
+                
               <div>
-                <h2 className="py-2">Lorem Ipsum</h2>
-                <p>Where does it come from?</p>
-                <p className="py-4">
+                <h2 className="py-2 tracking-widest text-md">Lorem Ipsum</h2>
+                <p className="tracking-widest text-md">Where does it come from?</p>
+                <p className="py-4 tracking-widest text-md">
                   Contrary to popular belief, Lorem Ipsum is not simply random
                   text. It has roots in a piece of classical Latin literature
                   from 45 BC, making it over 2000 years old.
                 </p>
               </div>
               <div>
-                <p className="uppercase pt-8">Connect With Us</p>
+                <p className="uppercase tracking-widest text-md py-4">Connect With Us</p>
                 <div className="flex items-center justify-between py-4">
                   <a
                     href="https://www.linkedin.com/"
@@ -57,10 +66,9 @@ const Contact = () => {
                     </div>
                   </a>
                   <a href="https://twitter.com/" className="text-blue-900">
-
-                  <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
-                    <FaTwitter />
-                  </div>
+                    <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
+                      <FaTwitter />
+                    </div>
                   </a>
                   <Link href="https://facebook.com/">
                     <div className="rounded-full shadow-lg shadow-gray-400 p-6 cursor-pointer hover:scale-110 ease-in duration-300">
@@ -127,7 +135,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-center py-12">
+        <div className="flex justify-center pt-8">
           <Link href="/">
             <div className="rounded-full shadow-lg shadow-gray-400 p-4 cursor-pointer hover:scale-110 ease-in duration-300">
               <HiOutlineChevronDoubleUp className="text-[#5651e5]" size={30} />
@@ -135,7 +143,7 @@ const Contact = () => {
           </Link>
         </div>
       </div>
-    </div>
+    
   );
 };
 

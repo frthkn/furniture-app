@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTheme } from 'next-themes'
-import { FiSun, FiMoon } from 'react-icons/fi';
+//import { FiSun, FiMoon } from 'react-icons/fi';
+import {BsFillMoonStarsFill, BsFillSunFill} from "react-icons/bs"
 
 function ChangeModes() {
   const { theme, setTheme } = useTheme()
@@ -12,11 +13,7 @@ function ChangeModes() {
       setTheme(theme === 'dark' ? 'light' : 'dark')
     }
   >
-    {theme === 'dark' ? (
-      <FiSun className="w-5 h-5 mr-2" />
-    ) : (
-      <FiMoon className="w-5 h-5 mr-2" />
-    )}
+    {theme === 'dark' ?  <BsFillSunFill /> :  <BsFillMoonStarsFill />}
     <span className="hidden">{theme === 'dark' ? 'Light Mode' : 'Dark Mode'}</span>
   </button>
   )
