@@ -1,6 +1,5 @@
 import React from 'react'
 import { useTheme } from 'next-themes'
-//import { FiSun, FiMoon } from 'react-icons/fi';
 import {BsFillMoonStarsFill, BsFillSunFill} from "react-icons/bs"
 
 function ChangeModes() {
